@@ -67,5 +67,17 @@ public class IEmployeeDaoImpl implements IEmployeeDAO {
 		return IEmpRepo.findByemail(email);
 	}
 
+	@Override
+	public List<Employee> getNamebyOrder() {
+		// TODO Auto-generated method stub
+		return null;//IEmpRepo.findByfirstNameSorted();
+	}
+
+	@Override
+	public List<Employee> getEmpEndWith(String name) {
+		// TODO Auto-generated method stub
+		return IEmpRepo.findByfirstNameEndsWith(name);
+	}
+
 	
 }

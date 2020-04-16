@@ -65,5 +65,17 @@ public class IEmployeeServiceImpl implements IEmployeeService {
 		return IEmpDao.findByemail(email);
 	}
 
+	@Override
+	public List<Employee> getNamebyOrder() {
+		
+		return IEmpDao.getNamebyOrder();
+	}
+
+	@Override
+	public List<Employee> getEmpEndWith(String name) {
+		// TODO Auto-generated method stub
+		return IEmpDao.getEmpEndWith(name);
+	}
+
 	
 }

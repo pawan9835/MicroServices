@@ -20,10 +20,10 @@ public class EmployeeController {
 	@Autowired
 	private IEmployeeService IEmpService;
 
-	@RequestMapping(value = "/employee/hello")
+	@RequestMapping(value = "/employee/home")
 	public String sayHello() {
 
-		return "Hello There !";
+		return "home";
 	}
 
 	@PostMapping(value = "/employee/add")
@@ -81,7 +81,17 @@ public class EmployeeController {
 
 		return IEmpService.findByemail(email);
 	}
-	
-	//adding new Method
+
+	@GetMapping(value = "employee/byname")
+	public List<Employee> getEmpNameByOrder() {
+
+		return IEmpService.getNamebyOrder();
+	}
+
+	@GetMapping(value = "/endwith/{name}")
+	public List<Employee> getEmpbyEndName(@PathVariable String name) {
+
+		return IEmpService.getEmpEndWith(name);
+	}
 
 }

@@ -19,6 +19,10 @@ public interface IEmployeeService {
 
 	public List<Employee> findbyFirstName(String first_name);
 
-	List<Employee> findByemail(String email);
+	public List<Employee> findByemail(String email);
+
+	public List<Employee> getNamebyOrder();
+
+	public List<Employee> getEmpEndWith(String name);
 
 }
